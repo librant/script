@@ -20,11 +20,19 @@ http://fls.jetbrains-agent.com 激活即可；
 
 ---
 
-问题二：Goland配置GOROOT无法识别已安装的go
+问题二：Goland配置 GOROOT 无法识别已安装的 go
 https://www.jianshu.com/p/7a2bcfa5f739
 
 在如下的文件中添加一行：
 go/src/runtime/internal/sys/zversion.go
 
 const theVersion = `go1.18`
+
+---
+
+问题三：Goland 无法跳转 vendor 下的代码
+http://404-notfound.cn/vendor-workaround/
+
+这里需要重新把 GOPATH 指定到 vendor 目录，因为 goland 默认从 GOPATH 下寻找依赖
+
 
